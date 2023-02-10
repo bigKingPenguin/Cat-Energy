@@ -1,8 +1,10 @@
 <template>
   <header>
     <navigation-logo class="logo"></navigation-logo>
-<!--    TODO: переименовать в "открыть/закрыть меню" при автоматизации-->
-    <button class="button button--navigation">Переключить меню</button>
+    <!--    TODO: переименовать в "открыть/закрыть меню" при автоматизации-->
+    <button class="button button--navigation">
+      Переключить меню
+    </button>
     <navigation-list class="navigation"></navigation-list>
   </header>
 </template>

@@ -1,14 +1,32 @@
 <template>
-  <nav class="navigation" aria-label="Меню навигации">
+  <nav
+      class="navigation"
+      aria-label="Меню навигации"
+  >
     <ul class="navigation__list">
       <li class="navigation__item">
-        <a href="#" class="navigation__link">Главная</a>
+        <a
+            href="#"
+            class="navigation__link"
+        >
+          Главная
+        </a>
       </li>
       <li class="navigation__item">
-        <a href="#" class="navigation__link">Каталог продукции</a>
+        <a
+            href="#"
+            class="navigation__link"
+        >
+          Каталог продукции
+        </a>
       </li>
       <li class="navigation__item">
-        <a href="#" class="navigation__link">Подбор программы</a>
+        <a
+            href="#"
+            class="navigation__link"
+        >
+          Подбор программы
+        </a>
       </li>
     </ul>
   </nav>

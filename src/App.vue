@@ -1,19 +1,13 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <Navbar></Navbar>
+  </div>
 </template>
+
+<script setup>
+
+import Navbar from "@/components/Navbar/Navbar.vue";
+</script>
 
 <style scoped>
 

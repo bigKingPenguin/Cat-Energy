@@ -3,7 +3,9 @@
       class="goals"
       aria-label="Выберите программу питания"
   >
-    <GoalCard></GoalCard>
+    <ul>
+      <GoalCard></GoalCard>
+    </ul>
   </section>
 </template>
 

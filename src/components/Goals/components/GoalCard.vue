@@ -1,5 +1,5 @@
 <template>
-  <div
+  <li
       class="goals__item"
       v-for="goal in goalCards"
       :key="goal.svgName"
@@ -22,7 +22,7 @@
       {{ goal.button }}
       <Arrow class="button__arrow"></Arrow>
     </a>
-  </div>
+  </li>
 </template>
 
 <script>

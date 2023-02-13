@@ -1,11 +1,12 @@
 <template>
   <img
+      v-for="img in promoImagesArr"
+      :key="img.src"
       :src="img.src"
       :width="img.width"
       :height="img.height"
       :alt="img.alt"
       :class="img.class"
-      v-for="img in promoImagesArr"
   >
 </template>
 
@@ -23,7 +24,7 @@ export default {
   // }
 
 
-  setup () {
+  setup() {
     const promoImagesArr = [
       {
         src: "src/assets/img/promo/index-can-mobile@1x.png",

@@ -1,5 +1,5 @@
 <template>
-  <div class="promo">
+  <section class="promo">
     <h1 class="promo__header">
       Функциональное питание для котов
     </h1>
@@ -14,14 +14,15 @@
     >
       Подобрать программу
     </a>
-  </div>
+  </section>
 </template>
 
 <script>
 import PromoImage from "@/components/Promo/components/PromoImage.vue";
+
 export default {
   name: "Promo",
-  components: {PromoImage}
+  components: {PromoImage},
 }
 </script>
 

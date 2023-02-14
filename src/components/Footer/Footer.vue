@@ -15,7 +15,7 @@
       </a>
       <a href="https://htmlacademy.ru/study" class="copyright__logo">
         <LogoHtml></LogoHtml>
-        <span class="copyright__logo--hide">
+        <span class="copyright__logo--hide-on-mobile">
           HTML Academy
         </span>
       </a>

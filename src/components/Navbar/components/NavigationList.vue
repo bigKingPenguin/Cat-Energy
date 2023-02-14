@@ -1,29 +1,29 @@
 <template>
   <nav
-      class="navigation"
-      aria-label="Меню навигации"
+    class="navigation"
+    aria-label="Меню навигации"
   >
     <ul class="navigation__list">
       <li class="navigation__item">
         <a
-            href="#"
-            class="navigation__link"
+          href="#"
+          class="navigation__link"
         >
           Главная
         </a>
       </li>
       <li class="navigation__item">
         <a
-            href="#"
-            class="navigation__link"
+          href="#"
+          class="navigation__link"
         >
           Каталог продукции
         </a>
       </li>
       <li class="navigation__item">
         <a
-            href="#"
-            class="navigation__link"
+          href="#"
+          class="navigation__link"
         >
           Подбор программы
         </a>
@@ -34,8 +34,8 @@
 
 <script>
 export default {
-  name: "NavigationList"
-}
+  name: 'NavigationList',
+};
 </script>
 
 <style lang="scss" scoped>

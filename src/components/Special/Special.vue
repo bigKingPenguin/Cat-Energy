@@ -5,9 +5,9 @@
     </h2>
     <ul>
       <SpecialItems
-          v-for="spec in specialItems"
-          :key="spec.iconName"
-          :specItem="spec"
+        v-for="spec in specialItems"
+        :key="spec.iconName"
+        :specItem="spec"
       >
       </SpecialItems>
     </ul>
@@ -15,35 +15,35 @@
 </template>
 
 <script>
-import SpecialItems from "@/components/Special/components/SpecialItems.vue";
+import SpecialItems from '@/components/Special/components/SpecialItems.vue';
 
 export default {
-  name: "Special",
+  name: 'Special',
   components: {SpecialItems},
   setup() {
     const specialItems = [
       {
-        iconName: "IconLeaf",
-        description: "Функциональное питание содержит только полезные питательные вещества."
+        iconName: 'IconLeaf',
+        description: 'Функциональное питание содержит только полезные питательные вещества.',
       },
       {
-        iconName: "IconSolution",
-        description: "Выпускается в виде порошка, который нужно лишь залить кипятком и готово."
+        iconName: 'IconSolution',
+        description: 'Выпускается в виде порошка, который нужно лишь залить кипятком и готово.',
       },
       {
-        iconName: "IconCutlery",
-        description: "Замените один-два приема обычной еды на наше функциональное питание."
+        iconName: 'IconCutlery',
+        description: 'Замените один-два приема обычной еды на наше функциональное питание.',
       },
       {
-        iconName: "IconClock",
-        description: "Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!"
-      }
-    ]
+        iconName: 'IconClock',
+        description: 'Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!',
+      },
+    ];
     return {
-      specialItems
-    }
-  }
-}
+      specialItems,
+    };
+  },
+};
 </script>
 
 <style scoped>

@@ -1,26 +1,25 @@
 <template>
   <img
-      :src="props.imageProp.src"
-      :width="props.imageProp.width"
-      :height="props.imageProp.height"
-      :alt="props.imageProp.alt"
-      :class="props.imageProp.class"
+    :src="props.imageProp.src"
+    :width="props.imageProp.width"
+    :height="props.imageProp.height"
+    :alt="props.imageProp.alt"
+    :class="props.imageProp.class"
   >
 </template>
 
 <script>
 export default {
-  name: "PromoImage",
+  name: 'PromoImage',
   props: {
     imageProp: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   setup(props) {
-    return {props}
-  }
-
-}
+    return {props};
+  },
+};
 </script>
 
 <style scoped>

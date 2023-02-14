@@ -1,13 +1,13 @@
 <template>
   <section
-      class="goals"
-      aria-label="Выберите программу питания"
+    class="goals"
+    aria-label="Выберите программу питания"
   >
     <ul>
       <GoalCard
-          v-for="card in goalCards"
-          :key="card.iconName"
-          :goalCard="card"
+        v-for="card in goalCards"
+        :key="card.iconName"
+        :goalCard="card"
       >
       </GoalCard>
     </ul>
@@ -16,31 +16,31 @@
 
 <script>
 
-import GoalCard from "@/components/Goals/components/GoalCard.vue";
+import GoalCard from '@/components/Goals/components/GoalCard.vue';
 
 export default {
-  name: "Goals",
+  name: 'Goals',
   components: {GoalCard},
   setup() {
     const goalCards = [
       {
-        iconName: "CatWeightLoss",
-        title: "Похудение",
-        description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
-        button: "Каталог slim"
+        iconName: 'CatWeightLoss',
+        title: 'Похудение',
+        description: 'Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.',
+        button: 'Каталог slim',
       },
       {
-        iconName: "CatWeightGain",
-        title: "Набор массы",
-        description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
-        button: "Каталог pro"
-      }
-    ]
+        iconName: 'CatWeightGain',
+        title: 'Набор массы',
+        description: 'Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!',
+        button: 'Каталог pro',
+      },
+    ];
     return {
-      goalCards
-    }
-  }
-}
+      goalCards,
+    };
+  },
+};
 </script>
 
 <style scoped>

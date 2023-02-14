@@ -5,7 +5,7 @@
       <FooterSocial
         v-for="link in social"
         :key="link.name"
-        :SocIcon="link"
+        :socIcon="link"
       >
       </FooterSocial>
     </ul>
@@ -15,6 +15,9 @@
       </a>
       <a href="https://htmlacademy.ru/study" class="copyright__logo">
         <LogoHtml></LogoHtml>
+        <span class="copyright__logo--hide">
+          HTML Academy
+        </span>
       </a>
     </div>
   </footer>

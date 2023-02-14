@@ -1,11 +1,7 @@
 <template>
   <li class="social__item">
-    <a
-      :href="props.SocIcon.link"
-    >
-      <component
-        :is="props.SocIcon.icon">
-      </component>
+    <a :href="props.socIcon.link">
+      <component :is="props.socIcon.icon"></component>
     </a>
   </li>
 </template>
@@ -20,7 +16,7 @@ export default {
   name: 'FooterSocial',
   components: {IconVk, IconFb, IconInst},
   props: {
-    SocIcon: {
+    socIcon: {
       type: Object,
     },
   },

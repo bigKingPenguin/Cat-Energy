@@ -1,7 +1,7 @@
 <template>
   <li class="goals__item">
     <component
-        :is="props.goalCard.svgName"
+        :is="props.goalCard.iconName"
         class="goals__logo"
     >
     </component>

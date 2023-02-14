@@ -3,7 +3,14 @@
       class="goals"
       aria-label="Выберите программу питания"
   >
-    <GoalCard></GoalCard>
+    <ul>
+      <GoalCard
+          v-for="card in goalCards"
+          :key="card.iconName"
+          :goalCard="card"
+      >
+      </GoalCard>
+    </ul>
   </section>
 </template>
 
@@ -14,6 +21,25 @@ import GoalCard from "@/components/Goals/components/GoalCard.vue";
 export default {
   name: "Goals",
   components: {GoalCard},
+  setup() {
+    const goalCards = [
+      {
+        iconName: "CatWeightLoss",
+        title: "Похудение",
+        description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
+        button: "Каталог slim"
+      },
+      {
+        iconName: "CatWeightGain",
+        title: "Набор массы",
+        description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
+        button: "Каталог pro"
+      }
+    ]
+    return {
+      goalCards
+    }
+  }
 }
 </script>
 

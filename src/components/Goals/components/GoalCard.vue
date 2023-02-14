@@ -1,28 +1,24 @@
 <template>
-  <div
-      class="goals__item"
-      v-for="goal in goalCards"
-      :key="goal.svgName"
-  >
+  <li class="goals__item">
     <component
-        :is="goal.svgName"
+        :is="props.goalCard.iconName"
         class="goals__logo"
     >
     </component>
     <h2 class="goals__header">
-      {{ goal.title }}
+      {{ props.goalCard.title }}
     </h2>
     <p class="goals__description">
-      {{ goal.description }}
+      {{ props.goalCard.description }}
     </p>
     <a
         href="#"
         class="button button--ghost"
     >
-      {{ goal.button }}
+      {{ props.goalCard.button }}
       <Arrow class="button__arrow"></Arrow>
     </a>
-  </div>
+  </li>
 </template>
 
 <script>
@@ -33,23 +29,14 @@ import CatWeightLoss from "@/components/icons/CatWeightLoss.vue";
 export default {
   name: "GoalCard",
   components: {Arrow, CatWeightGain, CatWeightLoss},
-  setup() {
-    const goalCards = [
-      {
-        svgName: "CatWeightLoss",
-        title: "Похудение",
-        description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
-        button: "Каталог slim"
-      },
-      {
-        svgName: "CatWeightGain",
-        title: "Набор массы",
-        description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
-        button: "Каталог pro"
-      }
-    ]
+  props: {
+    goalCard: {
+      type: Object
+    }
+  },
+  setup(props) {
     return {
-      goalCards
+      props
     }
   }
 }

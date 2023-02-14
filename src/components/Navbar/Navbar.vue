@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import NavigationLogo from "@/components/Navbar/components/NavigationLogo.vue";
-import NavigationList from "@/components/Navbar/components/NavigationList.vue";
+import NavigationLogo from '@/components/Navbar/components/NavigationLogo.vue';
+import NavigationList from '@/components/Navbar/components/NavigationList.vue';
 
 export default {
-  name: "Navbar",
-  components: {NavigationList, NavigationLogo}
-}
+  name: 'Navbar',
+  components: {NavigationList, NavigationLogo},
+};
 </script>
 
 <style lang="scss" scoped>

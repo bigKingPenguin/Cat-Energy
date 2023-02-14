@@ -1,8 +1,8 @@
 <template>
   <li class="goals__item">
     <component
-        :is="props.goalCard.iconName"
-        class="goals__logo"
+      :is="props.goalCard.iconName"
+      class="goals__logo"
     >
     </component>
     <h2 class="goals__header">
@@ -12,8 +12,8 @@
       {{ props.goalCard.description }}
     </p>
     <a
-        href="#"
-        class="button button--ghost"
+      href="#"
+      class="button button--ghost"
     >
       {{ props.goalCard.button }}
       <Arrow class="button__arrow"></Arrow>
@@ -22,24 +22,24 @@
 </template>
 
 <script>
-import Arrow from "@/components/icons/Arrow.vue";
-import CatWeightGain from "@/components/icons/CatWeightGain.vue";
-import CatWeightLoss from "@/components/icons/CatWeightLoss.vue";
+import Arrow from '@/components/icons/Arrow.vue';
+import CatWeightGain from '@/components/icons/CatWeightGain.vue';
+import CatWeightLoss from '@/components/icons/CatWeightLoss.vue';
 
 export default {
-  name: "GoalCard",
+  name: 'GoalCard',
   components: {Arrow, CatWeightGain, CatWeightLoss},
   props: {
     goalCard: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   setup(props) {
     return {
-      props
-    }
-  }
-}
+      props,
+    };
+  },
+};
 </script>
 
 <style scoped>

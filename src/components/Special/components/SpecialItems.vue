@@ -1,8 +1,8 @@
 <template>
   <li class="special__item">
     <component
-        :is="props.specItem.iconName"
-        class="special__icon"
+      :is="props.specItem.iconName"
+      class="special__icon"
     >
     </component>
     <p class="special__description">
@@ -12,27 +12,27 @@
 </template>
 
 <script>
-import IconClock from "@/components/icons/IconClock.vue";
-import IconCutlery from "@/components/icons/IconCutlery.vue";
-import IconLeaf from "@/components/icons/IconLeaf.vue";
-import IconSolution from "@/components/icons/IconSolution.vue";
+import IconClock from '@/components/icons/IconClock.vue';
+import IconCutlery from '@/components/icons/IconCutlery.vue';
+import IconLeaf from '@/components/icons/IconLeaf.vue';
+import IconSolution from '@/components/icons/IconSolution.vue';
 
 export default {
-  name: "SpecialItems",
+  name: 'SpecialItems',
   components: {IconSolution, IconLeaf, IconCutlery, IconClock},
   props: {
     specItem: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   setup(props) {
 
     return {
-      props
-    }
-  }
+      props,
+    };
+  },
 
-}
+};
 </script>
 
 <style scoped>

@@ -1,0 +1,18 @@
+:root {
+    --font-family-main: "Oswald", "Arial", sans-serif;
+    --font-family-additional: "Arial", sans-serif;
+    --font-size: 16px;
+    --line-height: 24px;
+    --font-weight: 400;
+    --color-text: var(--color-black);
+    --background-color: var(--color-white);
+    --mobile-width: 320px;
+    --tablet-width: 768px;
+    --desktop-width: 1440px;
+    --padding-mobile: 20px;
+    --padding-tablet: 30px;
+    --padding-desktop: 110px;
+
+    /*    Additional*/
+    --header-mobile-height: 67px;
+}

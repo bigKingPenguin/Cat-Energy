@@ -13,6 +13,8 @@ html {
 
 body {
   width: 100%;
+  min-width: 320px;
+  min-height: 100%;
   font-family: var(--font-family-main);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -49,4 +51,28 @@ button {
   cursor: pointer;
   padding: 0;
   background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

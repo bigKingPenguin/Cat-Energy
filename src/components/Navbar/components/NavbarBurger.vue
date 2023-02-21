@@ -23,6 +23,7 @@
     height: 32px;
     padding-top: 3px;
     padding-bottom: 3px;
+    padding-left: 8px;
 
     & > div {
       width: 100%;

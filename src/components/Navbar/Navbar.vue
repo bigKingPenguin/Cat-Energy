@@ -1,25 +1,27 @@
 <template>
   <header class="header">
-    <NavigationLogo class="logo"></NavigationLogo>
-    <LogoName class="logo__name"></LogoName>
-    <button
-      @click="navbarToggle"
-      class="button button--navigation"
-    >
+    <div class="header__logo">
+      <NavigationLogo class="logo"></NavigationLogo>
+      <LogoName class="logo__name"></LogoName>
+      <button
+        @click="navbarToggle"
+        class="button button--navigation"
+      >
       <span class="visually-hidden">
         {{ navbarIsOpen ? 'Закрыть меню' : 'Открыть меню' }}
       </span>
-      <NavbarBurger
-        :class="{
-         'burger--cross': !navbarIsOpen
+        <NavbarBurger
+          :class="{
+         'burger--cross': navbarIsOpen
        }"
-      >
-      </NavbarBurger>
-    </button>
+        >
+        </NavbarBurger>
+      </button>
+    </div>
     <NavigationList
       class="navigation"
       :class="{
-           'navigation--hidden': navbarIsOpen
+           'navigation--hidden': !navbarIsOpen
           }"
     >
     </NavigationList>
@@ -53,27 +55,34 @@
   .header {
     display: flex;
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-color: var(--color-white);
+    z-index: 2;
 
     @media (min-width: 768px) {
-      position: absolute;
-      width: calc(100% - var(--padding-tablet) * 2);
-      left: var(--padding-tablet);
-      padding-top: 0;
+      padding-top: 13px;
       padding-bottom: 0;
-      top: 24px;
-      background-color: transparent;
     }
 
     @media (min-width: 1440px) {
-      width: calc(100% - var(--padding-desktop) * 2);
-      left: var(--padding-desktop);
-      top: 58px;
+      padding-top: 41px;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    &__logo {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 11px;
+      padding-bottom: 12px;
+      background-color: var(--color-white);
+
+      @media (min-width: 768px) {
+        width: auto;
+      }
     }
   }
 
@@ -83,18 +92,24 @@
     left: calc(-1 * var(--padding-mobile));
     display: flex;
     width: calc(100% + 2 * var(--padding-mobile));
+    background-color: var(--color-white);
     transition: transform 0.6s ease;
     z-index: -1;
 
     &--hidden {
-      transform: translateY(-1000px);
+      transform: translateY(-300px);
+
+      @media (min-width: 768px) {
+        transform: none;
+        transition: none;
+      }
     }
 
     @media (min-width: 768px) {
-      z-index: 1;
       position: static;
+      background-color: transparent;
+      padding-top: 9px;
     }
-
   }
 
   .button--navigation {

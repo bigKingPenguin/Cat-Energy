@@ -25,11 +25,14 @@
     padding-right: var(--padding-mobile);
 
     @media (min-width: 768px) {
+      max-width: 1000px;
+      margin: 0 auto;
       padding-left: var(--padding-tablet);
       padding-right: var(--padding-tablet);
     }
 
     @media (min-width: 1440px) {
+      max-width: 1600px;
       padding-left: var(--padding-desktop);
       padding-right: var(--padding-desktop);
     }

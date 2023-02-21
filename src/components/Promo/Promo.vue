@@ -195,10 +195,12 @@
       height: 302px;
       margin-right: calc(-1 * var(--padding-mobile));
       margin-left: calc(-1 * var(--padding-mobile));
+      background-color: var(--color-primary);
       z-index: -1;
 
       @media (min-width: 768px) {
         width: auto;
+        background-color: transparent;
       }
 
       @media (min-width: 1440px) {
@@ -208,6 +210,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        background-color: var(--color-primary);
       }
     }
 

@@ -12,7 +12,7 @@
       </span>
         <NavbarBurger
           :class="{
-         'burger--cross': !navbarIsOpen
+         'burger--cross': navbarIsOpen
        }"
         >
         </NavbarBurger>
@@ -21,7 +21,7 @@
     <NavigationList
       class="navigation"
       :class="{
-           'navigation--hidden': navbarIsOpen
+           'navigation--hidden': !navbarIsOpen
           }"
     >
     </NavigationList>

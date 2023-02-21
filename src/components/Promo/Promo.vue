@@ -97,12 +97,12 @@
 
       @media (min-width: 768px) {
         max-width: unset;
-        padding-top: 50px;
+        padding-top: 52px;
         padding-left: 87px;
         position: relative;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1440px) {
         padding-top: 99px;
         padding-left: 80px;
       }
@@ -118,9 +118,9 @@
       text-align: center;
 
       @media (min-width: 768px) {
-        margin-bottom: 37px;
+        margin-bottom: 39px;
         font-size: 60px;
-        line-height: 61px;
+        line-height: 60px;
         color: var(--color-black);
         text-align: left;
       }
@@ -204,12 +204,12 @@
       }
 
       @media (min-width: 1440px) {
-        width: 51.5%;
+        width: 50%;
         min-width: unset;
         height: 696px;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 20px;
         background-color: var(--color-primary);
       }
     }

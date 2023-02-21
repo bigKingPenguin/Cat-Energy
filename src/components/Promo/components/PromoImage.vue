@@ -1,5 +1,6 @@
 <template>
   <img
+    :srcset="props.imageProp.srcset"
     :src="props.imageProp.src"
     :width="props.imageProp.width"
     :height="props.imageProp.height"
@@ -9,17 +10,17 @@
 </template>
 
 <script>
-export default {
-  name: 'PromoImage',
-  props: {
-    imageProp: {
-      type: Object,
+  export default {
+    name: 'PromoImage',
+    props: {
+      imageProp: {
+        type: Object,
+      },
     },
-  },
-  setup(props) {
-    return {props};
-  },
-};
+    setup(props) {
+      return {props};
+    },
+  };
 </script>
 
 <style scoped>

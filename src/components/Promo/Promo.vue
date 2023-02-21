@@ -16,12 +16,14 @@
     </div>
     <div class="promo__img-wrapper">
       <img
+        srcset="src/assets/img/promo/background-cat-mobile@2x.png 2x"
         src="src/assets/img/promo/background-cat-mobile@1x.png"
         width="320"
         height="302"
         class="promo__img promo__img--mobile"
       >
       <img
+        srcset="src/assets/img/promo/background-cat-desktop@2x.png 2x"
         src="src/assets/img/promo/background-cat-desktop@1x.png"
         width="720"
         height="694"
@@ -48,6 +50,7 @@
     setup() {
       const promoImagesArr = [
         {
+          srcset: 'src/assets/img/promo/index-can-mobile@2x.png 2x',
           src: 'src/assets/img/promo/index-can-mobile@1x.png',
           width: '280',
           height: '270',
@@ -55,6 +58,7 @@
           class: 'promo__pack promo__pack--mobile',
         },
         {
+          srcset: 'src/assets/img/promo/index-can-tablet@2x.png 2x',
           src: 'src/assets/img/promo/index-can-tablet@1x.png',
           width: '709',
           height: '609',
@@ -62,6 +66,7 @@
           class: 'promo__pack promo__pack--tablet',
         },
         {
+          srcset: 'src/assets/img/promo/index-can-desktop@2x.png 2x',
           src: 'src/assets/img/promo/index-can-desktop@1x.png',
           width: '552',
           height: '499',

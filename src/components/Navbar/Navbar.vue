@@ -54,20 +54,23 @@
 <style lang="scss" scoped>
   .header {
     display: flex;
-    width: 100%;
+    width: calc(100% + 2 * var(--padding-mobile));
+    margin-left: calc(-1 * var(--padding-mobile));
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
+    background-color: var(--color-white);
 
     @media (min-width: 768px) {
+      width: 100%;
+      margin-left: 0;
       padding-top: 13px;
       padding-bottom: 0;
     }
 
     @media (min-width: 1440px) {
       padding-top: 41px;
-      width: 100%;
       background-color: transparent;
     }
 
@@ -76,8 +79,7 @@
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      padding-top: 11px;
-      padding-bottom: 12px;
+      padding: 11px var(--padding-mobile) 12px;
       background-color: var(--color-white);
 
       @media (min-width: 768px) {
@@ -89,9 +91,9 @@
   .navigation {
     position: absolute;
     top: var(--header-mobile-height);
-    left: calc(-1 * var(--padding-mobile));
+    left: 0;
     display: flex;
-    width: calc(100% + 2 * var(--padding-mobile));
+    width: 100%;
     background-color: var(--color-white);
     transition: transform 0.6s ease;
     z-index: -1;
@@ -108,7 +110,7 @@
     @media (min-width: 768px) {
       position: static;
       background-color: transparent;
-      padding-top: 9px;
+      padding-top: 7px;
     }
   }
 

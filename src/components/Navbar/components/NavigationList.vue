@@ -4,7 +4,7 @@
     aria-label="Меню навигации"
   >
     <ul class="navigation__list">
-      <li class="navigation__item">
+      <li class="navigation__item navigation__item--current">
         <a
           href="#"
           class="navigation__link"
@@ -63,12 +63,26 @@
       @media (min-width: 768px) {
         border: none;
         padding-top: 10px;
-        padding-bottom: 0px;
+        padding-bottom: 0;
         width: max-content;
         margin-left: 36px;
 
         &:first-child {
           margin-left: 0;
+        }
+      }
+
+      &--current {
+        border-bottom: 2px solid var(--color-primary);
+
+        @media (min-width: 768px) {
+          padding-bottom: 5px;
+          border-bottom: 2px solid var(--color-primary);
+        }
+
+        @media (min-width: 1440px) {
+          padding-bottom: 0;
+          border-bottom: 2px solid var(--color-white);
         }
       }
     }
@@ -89,7 +103,7 @@
       @media (min-width: 768px) {
         font-size: 18px;
         font-weight: 400;
-        padding-bottom: 12px;
+        padding-bottom: 7px;
 
         //TODO: Можно сделать анимацию
         &:hover {

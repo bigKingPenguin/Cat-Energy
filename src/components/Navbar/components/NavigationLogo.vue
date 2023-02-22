@@ -3,21 +3,33 @@
     class="logo"
     href="#"
   >
-    <LogoMobile class="logo__mobile"></LogoMobile>
-    <LogoTablet class="logo__tablet"></LogoTablet>
-    <LogoDesktop class="logo__desktop"></LogoDesktop>
+    <Svg
+      name="logo-mobile"
+      width="34"
+      height="38"
+      class="logo__mobile"
+    >
+    </Svg>
+    <Svg name="logo-tablet"
+         width="174"
+         height="52"
+         class="logo__tablet">
+    </Svg>
+    <Svg
+      name="logo-desktop"
+      width="202"
+      height="59"
+      class="logo__desktop">
+    </Svg>
   </a>
 </template>
 
 <script>
-  import LogoMobile from '@/components/icons/LogoMobile.vue';
-  import LogoName from '@/components/icons/LogoName.vue';
-  import LogoTablet from '@/components/icons/LogoTablet.vue';
-  import LogoDesktop from '@/components/icons/LogoDesktop.vue';
+  import Svg from '@/components/common/Svg.vue';
 
   export default {
     name: 'NavigationLogo',
-    components: {LogoDesktop, LogoTablet, LogoName, LogoMobile},
+    components: {Svg},
   };
 </script>
 

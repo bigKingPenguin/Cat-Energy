@@ -2,7 +2,13 @@
   <header class="header">
     <div class="header__logo">
       <NavigationLogo class="logo"></NavigationLogo>
-      <LogoName class="logo__name"></LogoName>
+      <Svg
+        name="logo-name"
+        width="101"
+        height="18"
+        class="logo__name"
+      >
+      </Svg>
       <button
         @click="navbarToggle"
         class="button button--navigation"
@@ -33,11 +39,11 @@
   import NavigationLogo from '@/components/Navbar/components/NavigationLogo.vue';
   import NavigationList from '@/components/Navbar/components/NavigationList.vue';
   import NavbarBurger from '@/components/Navbar/components/NavbarBurger.vue';
-  import LogoName from '@/components/icons/LogoName.vue';
+  import Svg from '@/components/common/Svg.vue';
 
   export default {
     name: 'Navbar',
-    components: {NavbarBurger, NavigationList, NavigationLogo, LogoName},
+    components: {Svg, NavbarBurger, NavigationList, NavigationLogo},
     setup() {
       const navbarIsOpen = ref(false);
       const navbarToggle = () => {

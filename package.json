@@ -23,8 +23,9 @@
     "fast-glob": "^3.2.12",
     "prettier": "^2.7.1",
     "sass": "^1.58.1",
+    "sharp": "^0.31.3",
     "vite": "^4.0.0",
-    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-image-optimizer": "^1.0.8",
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "browserslist": [

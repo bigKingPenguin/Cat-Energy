@@ -4,10 +4,10 @@
     aria-label="Меню навигации"
   >
     <ul class="navigation__list">
-      <li class="navigation__item navigation__item--current">
+      <li class="navigation__item">
         <a
           href="#"
-          class="navigation__link"
+          class="navigation__link navigation__link--current"
         >
           Главная
         </a>
@@ -71,20 +71,6 @@
           margin-left: 0;
         }
       }
-
-      &--current {
-        border-bottom: 2px solid var(--color-primary);
-
-        @media (min-width: 768px) {
-          padding-bottom: 5px;
-          border-bottom: 2px solid var(--color-primary);
-        }
-
-        @media (min-width: 1440px) {
-          padding-bottom: 0;
-          border-bottom: 2px solid var(--color-white);
-        }
-      }
     }
 
     &__item:last-child {
@@ -104,16 +90,15 @@
         font-size: 18px;
         font-weight: 400;
         padding-bottom: 7px;
+        border-bottom: 2px solid transparent;
 
         //TODO: Можно сделать анимацию
         &:hover {
           opacity: 0.6;
-          padding-bottom: 10px;
           border-bottom: 2px solid var(--color-black);
         }
 
         &:active {
-          padding-bottom: 10px;
           border-bottom: 2px solid var(--color-primary);
         }
       }
@@ -124,13 +109,23 @@
 
         &:hover {
           opacity: 0.6;
-          padding-bottom: 10px;
           border-bottom: 2px solid var(--color-white);
         }
 
         &:active {
           opacity: 1;
-          padding-bottom: 10px;
+          border-bottom: 2px solid var(--color-white);
+        }
+      }
+
+      &--current {
+        border-bottom: 2px solid var(--color-primary);
+
+        @media (min-width: 768px) {
+          border-bottom: 2px solid var(--color-primary);
+        }
+
+        @media (min-width: 1440px) {
           border-bottom: 2px solid var(--color-white);
         }
       }

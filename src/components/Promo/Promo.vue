@@ -16,15 +16,15 @@
     </div>
     <div class="promo__img-wrapper">
       <img
-        srcset="src/assets/img/promo/background-cat-mobile@2x.png 2x"
-        src="src/assets/img/promo/background-cat-mobile@1x.png"
+        srcset="@/assets/img/promo/background-cat-mobile@2x.png 2x"
+        src="@/assets/img/promo/background-cat-mobile@1x.png"
         width="320"
         height="302"
         class="promo__img promo__img--mobile"
       >
       <img
-        srcset="src/assets/img/promo/background-cat-desktop@2x.png 2x"
-        src="src/assets/img/promo/background-cat-desktop@1x.png"
+        srcset="@/assets/img/promo/background-cat-desktop@2x.png 2x"
+        src="@/assets/img/promo/background-cat-desktop@1x.png"
         width="720"
         height="694"
         class="promo__img promo__img--desktop"
@@ -43,6 +43,13 @@
   import PromoImage from '@/components/Promo/components/PromoImage.vue';
   import SpecialItems from '@/components/Special/components/SpecialItems.vue';
   import Button from '@/components/common/Button.vue';
+  import packMobile1x from '@/assets/img/promo/pack-mobile@1x.png';
+  import packMobile2x from '@/assets/img/promo/pack-mobile@2x.png';
+  import packTablet1x from '@/assets/img/promo/pack-tablet@1x.png';
+  import packTablet2x from '@/assets/img/promo/pack-tablet@2x.png';
+  import packDesktop1x from '@/assets/img/promo/pack-desktop@1x.png';
+  import packDesktop2x from '@/assets/img/promo/pack-desktop@2x.png';
+
 
   export default {
     name: 'Promo',
@@ -50,24 +57,24 @@
     setup() {
       const promoImagesArr = [
         {
-          srcset: 'src/assets/img/promo/index-can-mobile@2x.png 2x',
-          src: 'src/assets/img/promo/index-can-mobile@1x.png',
+          srcset: packMobile2x,
+          src: packMobile1x,
           width: '280',
           height: '270',
           alt: 'Упаковка корма Cat Energy',
           class: 'promo__pack promo__pack--mobile',
         },
         {
-          srcset: 'src/assets/img/promo/index-can-tablet@2x.png 2x',
-          src: 'src/assets/img/promo/index-can-tablet@1x.png',
+          srcset: packTablet2x,
+          src: packTablet1x,
           width: '709',
           height: '609',
           alt: 'Упаковка корма Cat Energy',
           class: 'promo__pack promo__pack--tablet',
         },
         {
-          srcset: 'src/assets/img/promo/index-can-desktop@2x.png 2x',
-          src: 'src/assets/img/promo/index-can-desktop@1x.png',
+          srcset: packDesktop2x,
+          src: packDesktop1x,
           width: '552',
           height: '499',
           alt: 'Упаковка корма Cat Energy',
@@ -218,7 +225,6 @@
         background-color: var(--color-primary);
       }
     }
-
 
     &__img {
       width: 100%;

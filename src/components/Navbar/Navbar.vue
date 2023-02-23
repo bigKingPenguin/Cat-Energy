@@ -6,7 +6,7 @@
         name="logo-name"
         width="101"
         height="18"
-        class="logo__name"
+        class="header__logo-name"
       >
       </Svg>
       <button
@@ -25,9 +25,9 @@
       </button>
     </div>
     <NavigationList
-      class="navigation"
+      class="header__navigation"
       :class="{
-           'navigation--hidden': !navbarIsOpen
+           'header__navigation--hidden': !navbarIsOpen
           }"
     >
     </NavigationList>
@@ -92,49 +92,47 @@
         width: auto;
       }
     }
-  }
 
-  .navigation {
-    position: absolute;
-    top: var(--header-mobile-height);
-    left: 0;
-    display: flex;
-    width: 100%;
-    background-color: var(--color-white);
-    transition: transform 0.6s ease;
-    z-index: -1;
-
-    &--hidden {
-      transform: translateY(-300px);
+    &__logo-name {
+      @media (min-width: 768px) {
+        display: none;
+      }
 
       @media (min-width: 768px) {
-        transform: none;
-        transition: none;
+        margin-right: 44px;
       }
     }
 
-    @media (min-width: 768px) {
-      position: static;
-      background-color: transparent;
-      padding-top: 7px;
+    &__navigation {
+      position: absolute;
+      top: var(--header-mobile-height);
+      left: 0;
+      display: flex;
+      width: 100%;
+      background-color: var(--color-white);
+      transition: transform 0.6s ease;
+      z-index: -1;
+
+      &--hidden {
+        transform: translateY(-300px);
+
+        @media (min-width: 768px) {
+          transform: none;
+          transition: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        position: static;
+        background-color: transparent;
+        padding-top: 7px;
+      }
     }
   }
 
   .button--navigation {
     @media (min-width: 768px) {
       display: none;
-    }
-  }
-
-  .logo {
-    &__name {
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 768px) {
-      margin-right: 44px;
     }
   }
 </style>

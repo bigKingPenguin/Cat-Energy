@@ -1,6 +1,6 @@
 <template>
   <img
-    :srcset="props.imageProp.srcset"
+    :srcset="`${props.imageProp.srcset} 2x`"
     :src="props.imageProp.src"
     :width="props.imageProp.width"
     :height="props.imageProp.height"

@@ -94,9 +94,17 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 22px;
 
     @media (min-width: 768px) {
       align-items: flex-start;
+      padding-bottom: 526px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1440px) {
+      padding-bottom: 188px;
+      margin-bottom: 80px;
     }
 
     &__content-wrapper {

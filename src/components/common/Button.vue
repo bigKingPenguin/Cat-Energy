@@ -13,15 +13,23 @@
       v-if="props.iconName"
       class="button__icon"
     >
-      <component :is="props.iconName"></component>
+      <Svg
+        :name="props.iconName"
+        :width="props.iconWidth"
+        :height="props.iconHeight"
+      >
+    </Svg>
     </span>
   </component>
 
 </template>
 
 <script>
+  import Svg from '@/components/common/Svg.vue';
+
   export default {
     name: 'Button',
+    components: {Svg},
     props: {
       href: {
         type: String,
@@ -42,6 +50,12 @@
       iconName: {
         type: String,
         default: '',
+      },
+      iconWidth: {
+        type: [Number, String],
+      },
+      iconHeight: {
+        type: [Number, String],
       },
     },
 
@@ -65,13 +79,13 @@
     text-transform: uppercase;
     padding: 10px 26px;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       font-size: 20px;
       line-height: 18px;
       padding: 18px 27px;
     }
 
-    @media (max-width: 1440px) {
+    @media (min-width: 1440px) {
       font-size: 20px;
       line-height: 18px;
       padding: 18px 27px;
@@ -91,6 +105,34 @@
         & > span {
           opacity: 0.3;
         }
+      }
+    }
+
+    &--ghost {
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 0;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      &:active {
+        & > span {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &__icon {
+      margin-left: 14px;
+      vertical-align: middle;
+      line-height: 0;
+
+      @media (min-width: 768px) {
+        margin-left: 25px;
       }
     }
   }

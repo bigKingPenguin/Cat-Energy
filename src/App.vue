@@ -2,7 +2,7 @@
   <div class="page">
     <Navbar></Navbar>
     <Promo></Promo>
-    <!--    <Goals></Goals>-->
+    <Goals></Goals>
     <!--    <Special></Special>-->
     <!--    <Footer></Footer>-->
   </div>
@@ -11,7 +11,7 @@
 <script setup>
   import Navbar from '@/components/Navbar/Navbar.vue';
   import Promo from '@/components/Promo/Promo.vue';
-  // import Goals from '@/components/Goals/Goals.vue';
+  import Goals from '@/components/Goals/Goals.vue';
   // import Special from '@/components/Special/Special.vue';
   // import Footer from '@/components/Footer/Footer.vue';
 </script>

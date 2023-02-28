@@ -76,7 +76,7 @@
     }
 
     @media (min-width: 1440px) {
-      padding-top: 41px;
+      padding-top: 42px;
       background-color: transparent;
     }
 
@@ -90,6 +90,8 @@
 
       @media (min-width: 768px) {
         width: auto;
+        padding-top: 11px;
+        padding-left: 0;
       }
     }
 
@@ -125,7 +127,7 @@
       @media (min-width: 768px) {
         position: static;
         background-color: transparent;
-        padding-top: 7px;
+        padding-top: 6px;
       }
     }
   }

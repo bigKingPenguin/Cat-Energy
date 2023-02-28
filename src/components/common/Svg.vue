@@ -19,10 +19,10 @@
         default: null,
       },
       width: {
-        type: String,
+        type: [String, Number],
       },
       height: {
-        type: String,
+        type: [String, Number],
       },
     },
     setup(props) {

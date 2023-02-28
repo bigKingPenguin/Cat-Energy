@@ -7,7 +7,7 @@
       class="goals__logo"
     >
     </Svg>
-    <h2 class="goals__header">
+    <h2 class="goals__title">
       {{ props.goalCard.title }}
     </h2>
     <p class="goals__description">
@@ -55,22 +55,22 @@
       justify-content: center;
       background-color: var(--color-secondary);
       margin-bottom: 18px;
-      padding: 20px 20px 12px 20px;
+      padding: 35px 20px 12px 20px;
       position: relative;
 
       @media (min-width: 768px) {
-        padding: 77px 53px 52px;
+        padding: 77px 300px 52px 53px;
         margin-bottom: 30px;
       }
 
       @media (min-width: 1440px) {
+        padding-right: 53px;
         width: 46.7%;
       }
     }
 
-    &__header {
-      margin-left: 71px;
-      margin-top: 15px;
+    &__title {
+      padding-left: 71px;
       margin-bottom: 33px;
       font-size: 24px;
       line-height: 28px;
@@ -78,16 +78,14 @@
       text-transform: uppercase;
 
       @media (min-width: 768px) {
-        margin-left: 0;
-        margin-top: 0;
+        padding-left: 0;
         margin-bottom: 24px;
         font-size: 36px;
         line-height: 36px;
-        max-width: 65%;
       }
 
       @media (min-width: 1440px) {
-        margin-left: 161px;
+        padding-left: 161px;
         margin-bottom: 74px;
       }
     }
@@ -101,7 +99,6 @@
       border-bottom: 2px solid var(--color-border);
 
       @media (min-width: 768px) {
-        width: 57%;
         margin-bottom: 47px;
         padding: 0;
         font-size: 16px;
@@ -110,7 +107,6 @@
       }
 
       @media (min-width: 1440px) {
-        width: 100%;
         margin-bottom: 22px;
       }
     }
@@ -135,6 +131,10 @@
         left: 32px;
         right: unset;
       }
+    }
+
+    &__button {
+      margin-top: auto;
     }
   }
 </style>

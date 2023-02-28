@@ -51,7 +51,8 @@
 
     @media (min-width: 1440px) {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 6.6%;
     }
   }
 </style>

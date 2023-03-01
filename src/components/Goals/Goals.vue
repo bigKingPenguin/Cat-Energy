@@ -1,8 +1,9 @@
 <template>
   <section
+    class="goals"
     aria-label="Выберите программу питания"
   >
-    <ul class="goals">
+    <ul class="goals__list">
       <GoalCard
         v-for="card in goalCards"
         :key="card.iconName"
@@ -44,15 +45,27 @@
 
 <style lang="scss" scoped>
   .goals {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
+    margin-bottom: 7px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+    }
 
     @media (min-width: 1440px) {
-      flex-direction: row;
-      justify-content: center;
-      gap: 6.6%;
+      margin-bottom: 42px;
+    }
+
+    &__list {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6.6%;
+      }
     }
   }
 </style>

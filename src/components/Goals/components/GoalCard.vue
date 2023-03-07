@@ -93,7 +93,7 @@
     &__description {
       padding-bottom: 20px;
       margin-bottom: 8px;
-      font-family: "Arial", sans-serif;
+      font-family: var(--font-family-additional);
       font-size: 14px;
       line-height: 18px;
       border-bottom: 2px solid var(--color-border);

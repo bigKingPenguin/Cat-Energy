@@ -49,7 +49,15 @@
 
 <style lang="scss" scoped>
   .special {
-    padding-bottom: 12px;
+    padding-bottom: 22px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 9px;
+    }
+
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
 
     &__title {
       margin-bottom: 38px;

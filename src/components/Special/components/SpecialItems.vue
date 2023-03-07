@@ -32,12 +32,10 @@
       },
     },
     setup(props) {
-
       return {
         props,
       };
     },
-
   };
 </script>
 
@@ -62,6 +60,7 @@
 
       @media (min-width: 1440px) {
         width: 20.08%;
+        min-height: unset;
         padding-right: 0;
       }
     }
@@ -82,7 +81,7 @@
     }
 
     &__description {
-      font-family: "Arial", sans-serif;
+      font-family: var(--font-family-additional);
       font-size: 14px;
       line-height: 18px;
       align-self: center;

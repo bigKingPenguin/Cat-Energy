@@ -18,10 +18,10 @@
           </ExampleStatistics>
         </ul>
         <p class="example__cost">
-          <span>
+          <span class="example__text">
                 Затраты на питание:
           </span>
-          <span>
+          <span class="example__text">
             15 000 руб.
           </span>
         </p>
@@ -169,25 +169,28 @@
         display: flex;
         width: 30%;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         padding-top: 10px;
-
-        & > span {
-          font-size: 20px;
-          line-height: 20px;
-          margin-bottom: 10px;
-          text-align: right;
-        }
       }
 
       @media (min-width: 1440px) {
         margin-bottom: 65px;
         flex-direction: row;
         width: 100%;
+      }
+    }
 
-        & > span {
-          margin-right: 64px;
-        }
+    &__text {
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        text-align: right;
+      }
+
+      @media (min-width: 1440px) {
+        margin-right: 64px;
       }
     }
   }

@@ -27,9 +27,9 @@
           key="after"
         >
       </transition>
-
       <div
         class="img__wrapper img__wrapper--before"
+        v-if="!isMobile"
       >
         <img
           srcset="@/assets/img/example/cat-fat@2x.png 2x"
@@ -42,6 +42,7 @@
       </div>
       <div
         class="img__wrapper img__wrapper--after"
+        v-if="!isMobile"
         :style="`width: ${rangeValue}%`"
       >
         <img
@@ -119,17 +120,40 @@
     transform: translateZ(0);
 
     @media (min-width: 768px) {
+      position: relative;
       min-height: unset;
       margin-right: calc(-1 * var(--padding-tablet));
       margin-left: calc(-1 * var(--padding-tablet));
-      padding: 0 var(--padding-tablet) 69px;
+      padding: 0 var(--padding-tablet);
       background-image: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 28%, var(--color-special) 28%, var(--color-special) 100%);
     }
 
     @media (min-width: 1440px) {
+      width: 51%;
+      height: inherit;
       background-image: none;
       margin: 0;
       padding: 0;
+    }
+
+    &__control {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 768px) {
+        justify-content: center;
+        position: absolute;
+        top: 544px;
+        left: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 1440px) {
+        top: 556px;
+        left: 25px;
+      }
     }
 
     &__text {
@@ -140,20 +164,9 @@
         font-size: 20px;
         line-height: 24px;
         border-bottom: 1px dotted var(--color-special-2);
-        padding: 2px 0px;
+        padding: 2px 0;
         margin-left: 24px;
         margin-right: 24px;
-      }
-    }
-
-    &__control {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-
-      @media (min-width: 1440px) {
-        margin-left: 54px;
       }
     }
 
@@ -198,9 +211,7 @@
         display: flex;
         position: relative;
         width: 428px;
-        background-color: var(--color-special);
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        background-color: transparent;
         appearance: none;
 
         &::before {
@@ -263,12 +274,14 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 39px;
+      padding-bottom: 138px;
       padding-top: 505px;
+      margin-bottom: 0;
     }
 
-    @media (min-width: 768px) {
-      margin-bottom: 51px;
+    @media (min-width: 1440px) {
+      margin: 0;
+      height: 100%;
     }
 
     &__wrapper {
@@ -291,7 +304,8 @@
           background-image: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 34%, var(--color-special) 34%, var(--color-special) 100%);
 
           @media (min-width: 1440px) {
-            background-image: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 36.4%, var(--color-special) 36.4%, var(--color-special) 100%);
+            height: 100%;
+            background-image: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 29.5%, var(--color-special) 29.5%, var(--color-special) 100%);
           }
         }
       }

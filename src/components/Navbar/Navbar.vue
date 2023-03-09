@@ -3,7 +3,7 @@
     <div class="header__logo">
       <NavigationLogo class="logo"></NavigationLogo>
       <Svg
-        :name="logo-name"
+        name="logo-name"
         width="101"
         height="18"
         class="header__logo-name"

@@ -17,7 +17,10 @@
       </FooterSocial>
     </ul>
     <div class="footer__copyright copyright">
-      <a href="https://htmlacademy.ru/study" class="copyright__link">
+      <a
+        :href="ACADEMY_LINK"
+        class="copyright__link"
+      >
         <span class="copyright__name">
           HTML Academy
         </span>
@@ -43,6 +46,7 @@
     name: 'Footer',
     components: {FooterSocial, Svg},
     setup() {
+      const ACADEMY_LINK = 'https://htmlacademy.ru/study';
       const social = [
         {
           name: 'vk',
@@ -61,7 +65,7 @@
         },
       ];
       return {
-        social,
+        social, ACADEMY_LINK,
       };
     },
   };

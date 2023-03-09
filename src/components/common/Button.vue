@@ -18,7 +18,7 @@
         :width="props.iconWidth"
         :height="props.iconHeight"
       >
-    </Svg>
+      </Svg>
     </span>
   </component>
 

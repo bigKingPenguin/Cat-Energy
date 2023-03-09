@@ -26,13 +26,12 @@
 </template>
 
 <script>
-  import Arrow from '@/components/icons/Arrow.vue';
   import Svg from '@/components/common/Svg.vue';
   import Button from '@/components/common/Button.vue';
 
   export default {
     name: 'GoalCard',
-    components: {Arrow, Svg, Button},
+    components: {Svg, Button},
     props: {
       goalCard: {
         type: Object,

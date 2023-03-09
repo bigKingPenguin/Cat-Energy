@@ -133,20 +133,23 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: 25px;
       }
 
       @media (min-width: 1440px) {
         flex-direction: column;
+        margin-bottom: 0;
       }
     }
 
     &__statistics {
       display: flex;
+      width: 100%;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12.14%;
       max-width: 366px;
-      margin-bottom: 34px;
+      margin-bottom: 9px;
 
       @media (min-width: 768px) {
         justify-content: flex-start;
@@ -156,6 +159,7 @@
 
       @media (min-width: 1440px) {
         max-width: unset;
+        margin-bottom: 33px;
       }
     }
 
@@ -163,7 +167,7 @@
       text-transform: uppercase;
       font-size: 14px;
       line-height: 20px;
-      margin-bottom: 42px;
+      margin-bottom: 39px;
 
       @media (min-width: 768px) {
         display: flex;

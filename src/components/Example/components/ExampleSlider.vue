@@ -157,7 +157,7 @@
     }
 
     &__text {
-      padding: 12px 16px;
+      padding: 12px 18px;
       text-transform: uppercase;
 
       @media (min-width: 768px) {
@@ -263,7 +263,7 @@
     justify-content: center;
     align-items: center;
     min-height: 240px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     @media (min-width: 768px) {
       max-width: 708px;

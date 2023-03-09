@@ -29,7 +29,7 @@
   .statistics {
     &__item {
       display: flex;
-      min-width: 125px;
+      min-width: 123px;
       justify-content: center;
       align-items: center;
       position: relative;

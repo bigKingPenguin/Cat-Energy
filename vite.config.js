@@ -68,4 +68,7 @@ export default defineConfig({
   server: {
     host: true,
   },
+  optimizeDeps: {
+    include: ["@fawmi/vue-google-maps", "fast-deep-equal"],
+  },
 });

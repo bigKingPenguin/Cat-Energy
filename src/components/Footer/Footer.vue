@@ -78,7 +78,7 @@
     align-items: center;
     margin-left: calc(-1 * var(--padding-mobile));
     margin-right: calc(-1 * var(--padding-mobile));
-    padding: 40px var(--padding-mobile) 22px;
+    padding: 39px var(--padding-mobile) 22px;
     background-color: var(--color-secondary);
 
     @media (min-width: 768px) {

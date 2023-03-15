@@ -69,8 +69,8 @@
     setup() {
       const isVisible = ref(false);
 
-      const zoomMobile = {lat: 59.9391, lng: 30.323};
-      const zoomDesktop = {lat: 59.9391, lng: 30.3193};
+      const CENTER_MOBILE = {lat: 59.9391, lng: 30.323};
+      const CENTER_DESKTOP = {lat: 59.9391, lng: 30.3193};
 
       const centerPosition = ref(zoomMobile);
       const zoom = ref(14.5);

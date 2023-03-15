@@ -91,7 +91,7 @@
     setup() {
       const rangeValue = ref(0);
       const toggleImage = () => {
-        if (!isMobile) return;
+        if (!isMobile.value) return;
         rangeValue.value = rangeValue.value === 0 ? 100 : 0;
       };
 

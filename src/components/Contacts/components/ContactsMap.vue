@@ -11,6 +11,8 @@
       width="320"
       height="362"
       class="map__img map__img--mobile"
+      alt="Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"
+      v-if="isMobile"
     >
     <img
       srcset="@/assets/img/contacts/location-tablet@2x.png 2x"
@@ -18,6 +20,8 @@
       width="768"
       height="400"
       class="map__img map__img--tablet"
+      alt="Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"
+      v-if="isTablet"
     >
     <img
       srcset="@/assets/img/contacts/location-desktop@2x.png 2x"
@@ -25,6 +29,8 @@
       width="1440"
       height="400"
       class="map__img map__img--desktop"
+      alt="Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"
+      v-else
     >
     <GMapMap
       class="map__gmap"
@@ -33,6 +39,7 @@
       map-type-id="terrain"
       style="width: 100%; height: inherit; min-width: 320px"
       :key="mapKey"
+      aria-label="мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"
     >
       <GMapMarker
         v-if="!isMobile"
@@ -62,20 +69,25 @@
     setup() {
       const isVisible = ref(false);
 
-      const centerPosition = ref({lat: 59.9391, lng: 30.323});
+      const zoomMobile = {lat: 59.9391, lng: 30.323};
+      const zoomDesktop = {lat: 59.9391, lng: 30.3193};
+
+      const centerPosition = ref(zoomMobile);
       const zoom = ref(14.5);
       const mapKey = ref(0);
 
       const isDesktop = ref(false);
+      const isTablet = ref(false);
       const isMobile = ref(true);
 
       const onResize = () => {
         isDesktop.value = window.innerWidth >= 1440;
+        isTablet.value = window.innerWidth >= 768 && window.innerWidth < 1440;
         isMobile.value = window.innerWidth < 768;
       };
 
       watch([isDesktop, isMobile], () => {
-        centerPosition.value = isDesktop.value ? {lat: 59.9391, lng: 30.3193} : {lat: 59.9391, lng: 30.323};
+        centerPosition.value = isDesktop.value ? zoomDesktop : zoomMobile;
         zoom.value = isDesktop.value ? 16.5 : 14.5;
         mapKey.value++;
       }, {immediate: true});
@@ -93,9 +105,12 @@
         isVisible,
         pinTablet,
         pinMobile,
+        zoomMobile,
+        zoomDesktop,
         centerPosition,
         zoom,
         isDesktop,
+        isTablet,
         isMobile,
         onResize,
         mapKey,

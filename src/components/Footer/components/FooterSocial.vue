@@ -1,11 +1,14 @@
 <template>
   <li class="social__item">
-    <a :href="props.socIcon.link">
+    <a
+      class="social__link"
+      :href="props.socIcon.link"
+    >
       <Svg
         :name="props.socIcon.icon"
         width="23"
         height="22"
-        class="social__logo"
+        class="social__icon"
       >
       </Svg>
     </a>
@@ -51,7 +54,12 @@
       }
     }
 
-    &__logo {
+    &__link {
+      display: block;
+      line-height: 0;
+    }
+
+    &__icon {
       color: var(--color-special-3);
       width: 23px;
       height: 22px;
@@ -59,6 +67,15 @@
       @media (min-width: 768px) {
         width: 30px;
         height: 33px;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-primary);
+        opacity: 0.3;
       }
     }
   }

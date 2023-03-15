@@ -213,6 +213,7 @@
         width: 428px;
         background-color: transparent;
         appearance: none;
+        cursor: grab;
 
         &::before {
           content: "";

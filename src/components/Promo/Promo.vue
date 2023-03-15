@@ -7,12 +7,14 @@
       <p class="promo__tagline">
         Занялся собой? Займись котом!
       </p>
-      <PromoImage
-        v-for="img in promoImagesArr"
-        :key="img.src"
-        :imageProp="img"
-      >
-      </PromoImage>
+      <template v-for="img in promoImagesArr">
+        <PromoImage
+          v-if="(isMobile && img.device === 'mobile') || (isTablet && img.device === 'tablet') || (isDesktop && img.device === 'desktop')"
+          :key="img.src"
+          :imageProp="img"
+        >
+        </PromoImage>
+      </template>
     </div>
     <div class="promo__img-wrapper">
       <img
@@ -21,6 +23,7 @@
         width="320"
         height="302"
         class="promo__img promo__img--mobile"
+        v-if="isMobile"
       >
       <img
         srcset="@/assets/img/promo/background-cat-desktop@2x.png 2x"
@@ -28,6 +31,7 @@
         width="720"
         height="694"
         class="promo__img promo__img--desktop"
+        v-if="isDesktop"
       >
     </div>
     <Button
@@ -49,6 +53,7 @@
   import packTablet2x from '@/assets/img/promo/pack-tablet@2x.png';
   import packDesktop1x from '@/assets/img/promo/pack-desktop@1x.png';
   import packDesktop2x from '@/assets/img/promo/pack-desktop@2x.png';
+  import {onBeforeUnmount, onMounted, ref} from 'vue';
 
 
   export default {
@@ -63,6 +68,7 @@
           height: '270',
           alt: 'Упаковка корма Cat Energy',
           class: 'promo__pack promo__pack--mobile',
+          device: 'mobile',
         },
         {
           srcset: packTablet2x,
@@ -71,6 +77,7 @@
           height: '609',
           alt: 'Упаковка корма Cat Energy',
           class: 'promo__pack promo__pack--tablet',
+          device: 'tablet',
         },
         {
           srcset: packDesktop2x,
@@ -79,10 +86,33 @@
           height: '499',
           alt: 'Упаковка корма Cat Energy',
           class: 'promo__pack promo__pack--desktop',
+          device: 'desktop',
         },
       ];
+      const isDesktop = ref(false);
+      const isTablet = ref(false);
+      const isMobile = ref(true);
+
+      const onResize = () => {
+        isDesktop.value = window.innerWidth >= 1440;
+        isTablet.value = window.innerWidth >= 768 && window.innerWidth < 1440;
+        isMobile.value = window.innerWidth < 768;
+      };
+
+      onMounted(() => {
+        window.addEventListener('resize', onResize);
+        onResize();
+      });
+
+      onBeforeUnmount(() => {
+        window.removeEventListener('resize', onResize);
+      });
       return {
         promoImagesArr,
+        isMobile,
+        isTablet,
+        isDesktop,
+        onResize,
       };
     },
   };

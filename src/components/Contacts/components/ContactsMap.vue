@@ -71,9 +71,11 @@
 
       const CENTER_MOBILE = {lat: 59.9391, lng: 30.323};
       const CENTER_DESKTOP = {lat: 59.9391, lng: 30.3193};
+      const ZOOM_MOBILE = 14.5;
+      const ZOOM_DESKTOP = 16.5;
 
-      const centerPosition = ref(zoomMobile);
-      const zoom = ref(14.5);
+      const centerPosition = ref(CENTER_MOBILE);
+      const zoom = ref(ZOOM_MOBILE);
       const mapKey = ref(0);
 
       const isDesktop = ref(false);
@@ -87,8 +89,8 @@
       };
 
       watch([isDesktop, isMobile], () => {
-        centerPosition.value = isDesktop.value ? zoomDesktop : zoomMobile;
-        zoom.value = isDesktop.value ? 16.5 : 14.5;
+        centerPosition.value = isDesktop.value ? CENTER_DESKTOP : CENTER_MOBILE;
+        zoom.value = isDesktop.value ? ZOOM_DESKTOP : ZOOM_MOBILE;
         mapKey.value++;
       }, {immediate: true});
 
@@ -105,10 +107,12 @@
         isVisible,
         pinTablet,
         pinMobile,
-        zoomMobile,
-        zoomDesktop,
+        CENTER_MOBILE,
+        CENTER_DESKTOP,
         centerPosition,
         zoom,
+        ZOOM_MOBILE,
+        ZOOM_DESKTOP,
         isDesktop,
         isTablet,
         isMobile,

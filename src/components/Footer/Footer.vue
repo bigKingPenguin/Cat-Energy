@@ -24,7 +24,7 @@
         <span class="copyright__name">
           HTML Academy
         </span>
-        <span class="copyright__logo">
+        <span class="copyright__icon">
           <Svg
             name="logo_html"
             width="27"
@@ -78,7 +78,7 @@
     align-items: center;
     margin-left: calc(-1 * var(--padding-mobile));
     margin-right: calc(-1 * var(--padding-mobile));
-    padding: 40px var(--padding-mobile) 22px;
+    padding: 39px var(--padding-mobile) 22px;
     background-color: var(--color-secondary);
 
     @media (min-width: 768px) {
@@ -149,6 +149,28 @@
 
       @media (min-width: 768px) {
         margin-right: 22px;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-primary);
+        opacity: 0.3;
+      }
+    }
+
+    &__svg {
+      color: var(--color-special-dark);
+      
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-primary);
+        opacity: 0.3;
       }
     }
   }

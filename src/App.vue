@@ -5,6 +5,7 @@
     <Goals></Goals>
     <Special></Special>
     <Example></Example>
+    <Contacts></Contacts>
     <Footer></Footer>
   </div>
 </template>
@@ -15,6 +16,7 @@
   import Goals from '@/components/Goals/Goals.vue';
   import Special from '@/components/Special/Special.vue';
   import Example from '@/components/Example/Example.vue';
+  import Contacts from '@/components/Contacts/Contacts.vue';
   import Footer from '@/components/Footer/Footer.vue';</script>
 <style lang="scss" scoped>
   //ретина @media (min-resolution: 2dppx)
